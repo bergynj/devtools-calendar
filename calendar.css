@@ -1,0 +1,206 @@
+@font-face {
+    font-family: "OpenSansLight";
+    src: url(/assets/OpenSans-Light-webfont.eot);
+    src: url(/assets/OpenSans-Light-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/OpenSans-Light-webfont.woff) format("woff"), url(/assets/OpenSans-Light-webfont.ttf) format("truetype"), url(/assets/OpenSans-Light-webfont.svg#OpenSansLight) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url(/assets/OpenSans-Regular-webfont.eot);
+    src: url(/assets/OpenSans-Regular-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/OpenSans-Regular-webfont.woff) format("woff"), url(/assets/OpenSans-Regular-webfont.ttf) format("truetype"), url(/assets/OpenSans-Regular-webfont.svg#OpenSansRegular) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url(/assets/OpenSans-Bold-webfont.eot);
+    src: url(/assets/OpenSans-Bold-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/OpenSans-Bold-webfont.woff) format("woff"), url(/assets/OpenSans-Bold-webfont.ttf) format("truetype"), url(/assets/OpenSans-Bold-webfont.svg#OpenSansBold) format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
+.events .event .show-map {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+}
+.events .event .show-map:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+html {
+    font-size: 16px;
+}
+body {
+    color: #313131;
+    font: 62.5%/1.5"OpenSansRegular", Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    min-width: 768px;
+    -webkit-font-smoothing: antialiased;
+}
+.calendar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: none;
+    background: white;
+    border: 1px solid #dedede;
+    font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
+    margin: 20px 40px 10px;
+    padding: 15px 15px 35px 15px;
+    position: static;
+    z-index: 1;
+}
+@media screen and (min-width: 1000px) {
+    .calendar {
+        margin: 0;
+        position: absolute;
+        right: 80px;
+        top: 95px;
+        width: 38%;
+    }
+}
+iframe {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0;
+}
+@media screen and (min-width: 1000px) {
+    iframe {
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+header {
+    position: relative;
+    text-align: center;
+}
+header .date {
+    color: #bebebe;
+    font-family: "OpenSansLight", Helvetica, Arial, sans-serif;
+    font-size: 1.6em;
+    letter-spacing: -0.1em;
+    line-height: 2.2em;
+    margin: 0;
+    text-transform: uppercase;
+}
+header .date b {
+    display: block;
+    font: bold 3.2em/0.8em"OpenSansRegular", Helvetica, Arial, sans-serif;
+    letter-spacing: 0;
+}
+header .date .today {
+    color: #459be7;
+}
+header a {
+    border-bottom: 1px solid #edb330;
+    color: #777777;
+    font-size: 1.6em;
+    padding-bottom: 2px;
+    position: absolute;
+    text-decoration: none;
+    top: 10px;
+}
+header a:hover {
+    color: #edb330;
+}
+header a.prev {
+    left: 0;
+}
+header a.next {
+    right: 0;
+}
+h1 img {
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+    width: 35px;
+    height: 35px;
+}
+.events {
+    padding-left: 0;
+}
+.events .event {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    box-shadow: 0 3px 0 #edb330;
+    color: #777777;
+    font-size: 1.6em;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 10px 15px;
+    position: relative;
+}
+.events .event:last-child {
+    margin-bottom: 0;
+}
+.events .event iframe {
+    width: 100%;
+}
+.events .event .show-map {
+    background: url(/assets/icn-map.png) 0 0 no-repeat;
+    display: inline-block;
+    height: 20px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 12px;
+}
+.new {
+    margin-top: 20px;
+}
+.new,
+.create input[type="submit"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #edb330;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font: bold 1.6em"OpenSansRegular", Helvetica, Arial, sans-serif;
+    padding: 11px 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+.new:hover,
+.create input[type="submit"]:hover {
+    text-decoration: underline;
+}
+.create input[type="text"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid #dedede;
+    font: 1.6em"OpenSansRegular", Helvetica, Arial, sans-serif;
+    padding: 10px;
+    width: 100%;
+}
+.create input[type="text"]:focus {
+    outline: none;
+}
+.create input[type="submit"] {
+    border-left: 2px solid #dedede;
+    display: block;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    width: 160px;
+}
+.create {
+    margin-top: 20px;
+    overflow: auto;
+    position: relative;
+}
