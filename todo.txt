@@ -1,0 +1,18 @@
+Minimum Marketing Features:
+- Basic calendar event listing
+*(Future) Make it responsive / mobile compatible
+
+User(Developer) Stories:
+- Base calendar app
+- Multiple versions of (test) html / CodeSchool Devtool Scenario
+- Apply standard project structure / toolchain
+*(Future) Make Angular version
+
+
+Engineering Tasks:
+- Automated build using Grunt 
+- Static code analysis (Lint)
+- Minify / optimise JavaScript using Google Closure
+- Continous integration 
+- Setup testing (unit testing with Mocha, cross-browser testing Karma)
+*(Future) Deploy app (to Heroku?)
