@@ -1,0 +1,15 @@
+{
+  "name": "devtools-calendar",
+  "version": "1.0.0",
+  "description": "CodeSchool sample app for DevTools Course",
+  "main": "calendar.js",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathanael Utama",
+  "license": "ISC"
+}

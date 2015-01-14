@@ -33,11 +33,11 @@ window.Calendar = {
     },
 
     today: function() {
-        var today = new Date;
+        var today = new Date();
         return today;
     },
 
-    displayedDate: new Date,
+    displayedDate: new Date(),
 
     displayDate: function() {
         var dateParts = Calendar.displayedDate.toDateString().split(' ');
@@ -64,7 +64,7 @@ window.Calendar = {
 
     createEvent: function() {
         var name = $('.create input[type="text"]').val();
-        if (name == "") {
+        if (name === "") {
             $('.create input[type="text"]').addClass('required');
         } else {
             Calendar.saveEvent({

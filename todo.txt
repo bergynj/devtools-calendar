@@ -4,15 +4,18 @@ Minimum Marketing Features:
 
 User(Developer) Stories:
 - Base calendar app
-- Multiple versions of (test) html / CodeSchool Devtool Scenario
 - Apply standard project structure / toolchain
+- Multiple versions of (test) html / CodeSchool Devtool Scenario
 *(Future) Make Angular version
 
-
 Engineering Tasks:
-- Automated build using Grunt 
-- Static code analysis (Lint)
+- Create build script using Grunt (done!)
+- Static code analysis (Lint) using JSHint (done!) : jquery-ui ignored, failed lint test
 - Minify / optimise JavaScript using Google Closure
-- Continous integration 
 - Setup testing (unit testing with Mocha, cross-browser testing Karma)
+    (unit test - Mocha) 
+    1. DOM test & load calendar setup test
+    2. a function which validates add event
+    (smoke test - Karma)
+    1. run on different browsers - make sure user sees a calendar
 *(Future) Deploy app (to Heroku?)

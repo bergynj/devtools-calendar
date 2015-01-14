@@ -1,7 +1,7 @@
 Calendar.createEvent = function() {
     var field = $('.createForm input[type="text"]')[0];
     var name = field.value;
-    if (name == "") {
+    if (name === "") {
         $(field).addClass('required');
     } else {
         Calendar.saveEvent({
