@@ -3,21 +3,56 @@ module.exports = function (grunt) {
 	// init config
 	grunt.initConfig({
 		// read & parse npm package file
-		pkg : grunt.file.readJSON("./package.json"),
+		"pkg": grunt.file.readJSON("package.json"),
 		
 		// config jshint
-		jshint: {
+		"jshint": {
 			options: lintOpt(),
             // jquery-ui.js ignored, not lint free
 			files: ["Gruntfile.js", "javascripts/calendar*.js", "javascripts/jquery.js"]
-		}
+		},
+        
+        // config for closure-compiler to optimise js
+        // https://mazira.com/blog/minifying-javascript-grunt
+        "closure-compiler": {
+            simple: {
+                closurePath: "/lib/compiler.jar",
+                js: [
+                    "/javascripts/jquery.js",
+                    "/javascripts/calendar.js"
+                ],
+                jsOutputFile: "/javascripts/app-simple.min.js",
+                noreport: true,
+                options: {
+                    compilation_level: "SIMPLE_OPTIMIZATIONS",
+                    warning_level:"DEFAULT"
+                }
+            },
+            adv: {
+                closurePath: "/lib/compiler.jar",
+                cwd: '/javascripts',
+                js: [
+                    "/jquery.js",
+                    "/jquery-ui.js",
+                    "/calendar.js"
+                ],
+                jsOutputFile: "/javascripts/min/app-adv.min.js",
+                noreport: true,
+                options: {
+                    compilation_level: "ADVANCED_OPTIMIZATIONS",
+                    warning_level:"DEFAULT"
+                }
+            }
+        }
 	
 	});
 	
 	// load module - jshint
 	grunt.loadNpmTasks("grunt-contrib-jshint");
-	
+	grunt.loadNpmTasks("grunt-closure-compiler");
+    
 	grunt.registerTask("default", "Default description - Lint & Test", ["printOpt","jshint"]);
+	grunt.registerTask("minify", "Minify JavaScript", ["closure-compiler:adv"]);
     
     grunt.registerTask("printOpt", "Printing lint options", function() {
         console.log(JSON.stringify(lintOpt()));
