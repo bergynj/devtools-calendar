@@ -18,8 +18,8 @@ module.exports = function (grunt) {
             simple: {
                 closurePath: "/lib/compiler.jar",
                 js: [
-                    "/javascripts/jquery.js",
-                    "/javascripts/calendar.js"
+                    '/javascripts/jquery.js',
+                    '/javascripts/calendar.js'
                 ],
                 jsOutputFile: "/javascripts/app-simple.min.js",
                 noreport: true,
@@ -29,13 +29,9 @@ module.exports = function (grunt) {
                 }
             },
             adv: {
-                closurePath: "/lib/compiler.jar",
-                cwd: '/javascripts',
-                js: [
-                    "/jquery.js",
-                    "/jquery-ui.js",
-                    "/calendar.js"
-                ],
+                closurePath: "/lib",
+                // cwd: "/javascripts",
+                js: ["/javascripts/jquery.js", "/javascripts/jquery-ui.js"],
                 jsOutputFile: "/javascripts/min/app-adv.min.js",
                 noreport: true,
                 options: {
@@ -51,9 +47,14 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-closure-compiler");
     
-	grunt.registerTask("default", "Default description - Lint & Test", ["printOpt","jshint"]);
-	grunt.registerTask("minify", "Minify JavaScript", ["closure-compiler:adv"]);
+    grunt.registerTask("default", "Default description - Lint & Test", ["jshint"]);
+    grunt.registerTask("minify", "Minify JavaScript", ["closure-compiler:adv"]);
     
+    // create unit testing
+    
+    
+    
+    // dummy task to print linting options
     grunt.registerTask("printOpt", "Printing lint options", function() {
         console.log(JSON.stringify(lintOpt()));
     });
