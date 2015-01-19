@@ -1,21 +1,21 @@
 @font-face {
     font-family: "OpenSansLight";
-    src: url(/assets/OpenSans-Light-webfont.eot);
-    src: url(/assets/OpenSans-Light-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/OpenSans-Light-webfont.woff) format("woff"), url(/assets/OpenSans-Light-webfont.ttf) format("truetype"), url(/assets/OpenSans-Light-webfont.svg#OpenSansLight) format("svg");
+    src: url("../assets/OpenSans-Light-webfont.eot");
+    src: url("../assets/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/OpenSans-Light-webfont.woff") format("woff"), url("../assets/OpenSans-Light-webfont.ttf") format("truetype"), url("../assets/OpenSans-Light-webfont.svg#OpenSansLight") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: "OpenSansRegular";
-    src: url(/assets/OpenSans-Regular-webfont.eot);
-    src: url(/assets/OpenSans-Regular-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/OpenSans-Regular-webfont.woff) format("woff"), url(/assets/OpenSans-Regular-webfont.ttf) format("truetype"), url(/assets/OpenSans-Regular-webfont.svg#OpenSansRegular) format("svg");
+    src: url("../assets/OpenSans-Regular-webfont.eot");
+    src: url("../assets/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/OpenSans-Regular-webfont.woff") format("woff"), url("../assets/OpenSans-Regular-webfont.ttf") format("truetype"), url("../assets/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: "OpenSansRegular";
-    src: url(/assets/OpenSans-Bold-webfont.eot);
-    src: url(/assets/OpenSans-Bold-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/OpenSans-Bold-webfont.woff) format("woff"), url(/assets/OpenSans-Bold-webfont.ttf) format("truetype"), url(/assets/OpenSans-Bold-webfont.svg#OpenSansBold) format("svg");
+    src: url("../assets/OpenSans-Bold-webfont.eot");
+    src: url("../assets/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../assets/OpenSans-Bold-webfont.woff") format("woff"), url("../assets/OpenSans-Bold-webfont.ttf") format("truetype"), url("../assets/OpenSans-Bold-webfont.svg#OpenSansBold") format("svg");
     font-weight: bold;
     font-style: normal;
 }
@@ -147,7 +147,7 @@ h1 img {
     width: 100%;
 }
 .events .event .show-map {
-    background: url(/assets/icn-map.png) 0 0 no-repeat;
+    background: url("../assets/icn-map.png) 0 0 no-repeat;
     display: inline-block;
     height: 20px;
     position: absolute;

@@ -1,26 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head> <title> Devtool Calendar Sample - CodeSchool </title></head>
-    <link rel="stylesheet" href="/css/calendar.css" />
-    <!--script src="./assets/jquery.js"></script-->
+    <link rel="stylesheet" href="./css/calendar.css" />
+    <script src="./javascripts/jquery.js"></script>
+    <script src="./javascripts/jquery-ui.js"></script>
 <body>
     <section id="calendar" class="calendar" style="display: block;">
         <header>
           <a class="prev" href="#">Prev</a>
           <a class="next" href="#">Next</a>
-          <h1 id="date" class="date"><b>Mon</b> Jan 12 2015</h1>
+          <h1 id="date" class="date">
+              <!-- img src="./images/small-icon.png" -->
+          </h1>
         </header>
         <ul id="events" class="events">
-            <li class="event">Run 5K</li>
-            <li class="event">Build Robot</li>
-            <li class="event">Take Over the World</li></ul>
-        <a class="new" href="#" style="display: none;">Add Event</a>
+            <!-- event list -->
+        </ul>
+        <a class="new" href="#">Add Event</a>
         <form class="create" style="display: block;" _lpchecked="1">
           <input type="text" placeholder="Enter an event">
           <input type="submit" value="Create Event">
         </form>
+
     </section>   
-    <script src="/javascripts/calendar.js"></script>
-    <!--script src="./assets/jquery-ui.js"></script-->
+    <script src="./javascripts/calendar.js"></script>
 </body>
 </html>

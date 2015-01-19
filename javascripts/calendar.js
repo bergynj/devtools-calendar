@@ -83,6 +83,10 @@ window.Calendar = {
     },
 
     setup: function() {
+        
+        // init today's header
+        Calendar.displayDate();
+        
         $('.create').hide();
         $('.create').submit(function(e) {
             e.preventDefault();
@@ -92,7 +96,7 @@ window.Calendar = {
             e.preventDefault();
             Calendar.displayCreate();
         });
-
+        
         $('.prev').on('click', function(e) {
             $('.create input[type="text"]').removeClass('required');
             $calendar = $('.calendar');
@@ -128,7 +132,6 @@ window.Calendar = {
             });
         })
 
-        Calendar.displayDate();
     }
 }
 
