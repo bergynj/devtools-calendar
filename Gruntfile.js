@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 			files: ["Gruntfile.js", "javascripts/calendar*.js", "javascripts/jquery.js"]
 		},
         
-        // config for closure-compiler to optimise js
+        // config for closure-compiler to minify & optimise js
         // https://mazira.com/blog/minifying-javascript-grunt
         "closure-compiler": {
             simple: {
@@ -39,6 +39,18 @@ module.exports = function (grunt) {
                     warning_level:"DEFAULT"
                 }
             }
+        },
+        
+        // config for karma
+        // http://blog.credera.com/technology-insights/java/testing-angularjs-part-3-karma-grunt/
+        karma: {
+            options: {
+                configFile: "./karma.conf"
+            },
+            unit: {
+                // run single test instead continously
+                singleRun: true
+            }
         }
 	
 	});
@@ -46,6 +58,7 @@ module.exports = function (grunt) {
 	// load module - jshint
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-closure-compiler");
+	grunt.loadNpmTasks("grunt-karma");
     
     grunt.registerTask("default", "Default description - Lint & Test", ["jshint"]);
     grunt.registerTask("minify", "Minify JavaScript", ["closure-compiler:adv"]);
